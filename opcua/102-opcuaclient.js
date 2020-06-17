@@ -537,7 +537,7 @@ module.exports = function (RED) {
                     verbose_log("UInt16:" + dataValue.value.value + " -> Int32:" + opcuaBasics.toInt32(dataValue.value.value));
                   }
 
-                  msg.payload = dataValue.value.value;
+                  msg.payload = dataValue.value;
 
                   if (dataValue.statusCode && dataValue.statusCode.toString(16) == "Good (0x00000)") {
                     verbose_log("\tStatus-Code:" + (dataValue.statusCode.toString(16)).green.bold);
